@@ -14,7 +14,7 @@ private:
     QString mFilePath;
     QImage mThumbnail;
 
-    bool RenderFileToImage(QString filePath, QImage* target);
+    bool RenderFileToImage(QString filePath, QImage* target, bool keepAspectRatio = true);
 
 public:
     FileListItem(QString filePath);
@@ -22,7 +22,7 @@ public:
     QString GetFilename() const;
     QImage GetThumbnail() const;
 
-    bool RenderToImage(QImage* target);
+    bool RenderToImage(QImage* target, bool keepAspectRatio = true);
 };
 
 #endif // FILELISTITEM_H
